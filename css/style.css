@@ -1,4 +1,8 @@
 body {
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font: 1.2em;
+  letter-spacing: .2px;
+  line-height: 1.6;
   width: 50%;
   margin: auto auto;
 }
@@ -15,11 +19,17 @@ h1 {
   font-size: 4em;
   margin: 25px;
 }
-p {
+h3 {
+  font: 1.2em bold;
+  margin: 5px;
+}
+.bio {
   margin: 25px;
   padding: 10px;
   border: rgb(255, 255, 255) solid 3px;
   border-radius: 15px;
+  background-color: burlywood;
+  color: rgb(47, 47, 47)
 }
 footer {
   background-color: blanchedalmond;
