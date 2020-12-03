@@ -23,13 +23,29 @@ h3 {
   font: 1.2em bold;
   margin: 5px;
 }
+
 .bio {
+  position: relative;
+  display: block;
   margin: 25px;
   padding: 10px;
   border: rgb(255, 255, 255) solid 3px;
   border-radius: 15px;
   background-color: burlywood;
   color: rgb(47, 47, 47)
+}
+.exp{
+  display: inline-block;
+  width: auto;
+  padding:25px;
+  height: auto;
+  margin: 25px 50px;
+}
+
+ul, ul li, ol, ol li{
+  list-style: inside disc;
+  margin: 0;
+  padding: 0;
 }
 footer {
   background-color: blanchedalmond;
