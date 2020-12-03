@@ -47,6 +47,10 @@ ul, ul li, ol, ol li{
   margin: 0;
   padding: 0;
 }
+
+ol, ol li{
+  list-style: decimal;
+}
 footer {
   background-color: blanchedalmond;
   padding: 25px;
