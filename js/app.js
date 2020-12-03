@@ -4,10 +4,13 @@ let answer = '';
 
 let userName = '', q1 = '', q2 = '', q3 = '', q4 = '';
 
+let score = 0;
+
 //checked with Ryan and leaving function in from Lab2
 const responseYes = function (input) {
   if (input === 'yes' || input === 'y') {
     answer = 'correct! Nice work!';
+    score++;
   } else {
     answer = 'Incorrect, nice try';
   }
@@ -18,6 +21,7 @@ const responseYes = function (input) {
 const responseNo = function (input) {
   if (input === 'no' || input === 'n') {
     answer = 'correct! Nice work!';
+    score++;
   } else {
     answer = 'Incorrect, nice try';
   }
@@ -57,6 +61,7 @@ while (numOfGuesses > 1 || guess !== guessNumber) {
   }
   else if (guess === guessNumber) {
     alert(`Nice job ${guessNumber} is correct.`);
+    score++;
     break;
   }
   else if (guess > guessNumber) {
@@ -78,34 +83,38 @@ while (numOfGuesses > 1 || guess !== guessNumber) {
   }
 }
 
-//Add a multiple choice question for the user to guess.
+
 //number of guesses left
 let guessLeft = 6;
-let score = 0;
+//score for arrGame to end game - should be changed out for boolean
+let arrGameScore = 0;
+
 //an array that stores multiple answers
 const anwserArr = ['pizza', 'steak', 'burritos'];
-//prompt a question like guess what my top 3 favorite foods are?
-let multiGuess = prompt(`Can you guess what my top 3 favorite foods are? You have ${guessLeft} trys.`);
 
 //loop through the problem while guesses left is > 1
 while (guessLeft > 1) {
-  console.log(guessLeft);
 
+  //prompt a question like guess what my top 3 favorite foods are?
+  let multiGuess = prompt(`Can you guess what my top 3 favorite foods are? You have ${guessLeft} trys.`);
+  //subract from guesses
+  guessLeft--;
+  //console.log(guessLeft);
   for (let i = 0; i < anwserArr.length; i++) {
     //check to see if multguess = one of the answers in the array.
     if (multiGuess === anwserArr[i]) {
       alert(`Awesome ${anwserArr[i]} is one of my favorite foods.`);
-      score = score + 1;
+      score++;
+      arrGameScore++;
     }
   }
-  guessLeft--;
-  multiGuess = prompt(`Try again? You have ${guessLeft} trys. You have ${score} correct.`);
-  if (score === 3) {
+  //if they guessed them all end the game.
+  if (arrGameScore >= 3) {
     break;
   }
 }
-if (guessLeft === 1) {
-  alert(`Thanks for playing ${userName}. Your score was ${score}/3. Here are the correct anwers. ${anwserArr}. Thanks for playing.`);
+if (guessLeft === 0) {
+  alert(`Thanks for playing . Your score was ${score}/3. Here are the correct anwers. ${anwserArr}. Thanks for playing.`);
 } else {
-  alert(`Thanks for playing ${userName}! You got them all right! You got a score of ${score}/3.`);
+  alert(`Thanks for playing ! You got them all right! You got a score of ${score}/3.`);
 }
