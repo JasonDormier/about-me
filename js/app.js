@@ -28,24 +28,41 @@ const responseNo = function (input) {
   alert(answer);
 };
 
-userName = prompt('What is your name?').toLowerCase();
+function questionOne(){
+  userName = prompt('What is your name?').toLowerCase();
 //console.log(`The users name is ${userName}.`);
+}
 
-q1 = prompt(`Hello ${userName}, welcome to my interactive bio. Is my name Jason?`).toLowerCase();
-console.log(q1);
-responseYes(q1);
+function questionTwo(){
+  q1 = prompt(`Hello ${userName}, welcome to my interactive bio. Is my name Jason?`).toLowerCase();
+  console.log(q1);
+  responseYes(q1);
+}
 
-q2 = prompt('Are the Seahawks my favorite football team?').toLowerCase();
-console.log(q2);
-responseYes(q2);
+function questionThree(){
+  q2 = prompt('Are the Seahawks my favorite football team?').toLowerCase();
+  console.log(q2);
+  responseYes(q2);
+}
 
-q3 = prompt('Is soccer my favorite sport?').toLowerCase();
-console.log(q3);
-responseNo(q3);
+function questionFour(){
+  q3 = prompt('Is soccer my favorite sport?').toLowerCase();
+  console.log(q3);
+  responseNo(q3);
+}
 
-q4 = prompt('Am I in my 40s?').toLowerCase();
-console.log(q4);
-responseNo(q4);
+function questionFive(){
+  q4 = prompt('Am I in my 40s?').toLowerCase();
+  console.log(q4);
+  responseNo(q4);
+}
+
+questionOne();
+questionTwo();
+questionThree();
+questionFour();
+questionFive();
+
 
 //add the guessing game
 //need a let for number of guesses.
