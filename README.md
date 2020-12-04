@@ -19,3 +19,6 @@ Referenced some of my work from Udemy Javascript course.
 12/3/2020 A much harder day getting the js logic to work with both the games.
 
 12/2/202 This was fun and I decided to go a step further with my js code and add some funtions for the if statements and respones.
+
+### Collaborator
+Carly Dekock
